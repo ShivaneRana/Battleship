@@ -7,7 +7,7 @@
     "test": "jest",
     "watch": "jest --watch *.js",
     "server": "webpack server",
-    "deploy": "git add dist/ && git commit -m 'rebundle' && git subtree push --prefix dist origin gh-pages",
+    "deploy": "git add dist/ && git commit -m 'rebundle' && git subtree push --prefix dist origin gh-pages && git push",
     "build": "webpack",
     "pwrite": "npx prettier . --write",
     "pcheck": "npx prettier . --check",
