@@ -2,6 +2,12 @@ const {Ship} = require('../module/ship.js');
 
 describe("Ship class",() => {
 
+    let ship1;
+
+    beforeEach(() => {
+        ship1 = new Ship();
+    })
+
     test("Ship class is defined",() => {
         expect(Ship).toBeDefined();
     })
@@ -12,5 +18,10 @@ describe("Ship class",() => {
         expect(new Ship().sank).toBeDefined();
     })
 
-    
+    test("check for hit function",() => {
+        expect(ship1.hitTaken).toBe(0);
+        ship1.hit();
+        expect(ship1.hitTaken).toBe(1);
+        
+    })    
 })
