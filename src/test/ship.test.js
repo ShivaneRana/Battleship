@@ -22,6 +22,14 @@ describe("Ship class",() => {
         expect(ship1.hitTaken).toBe(0);
         ship1.hit();
         expect(ship1.hitTaken).toBe(1);
+    })
+
+    test("check if the ship can sink",() => {
+        ship1.hit();
+        ship1.hit();
+        expect(ship1.isSunk()).toBeFalsy();
+        ship1.hit();
+        expect(ship1.isSunk()).toBeTruthy();
         
-    })    
+    })
 })
