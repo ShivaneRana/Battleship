@@ -4,7 +4,11 @@ class Ship{
         this.hitTaken = 0;
         this.sank = false;
     }
-}``
+
+    hit(){
+        this.hitTaken++;
+    }
+}
 
 module.exports = {
     Ship,
