@@ -21,7 +21,8 @@ describe("Ship class",() => {
     test("check for hit function",() => {
         expect(ship1.hitTaken).toBe(0);
         ship1.hit();
-        expect(ship1.hitTaken).toBe(1);
+        ship1.hit();
+        expect(ship1.hitTaken).toBe(2);
     })
 
     test("check if the ship can sink",() => {
@@ -30,6 +31,5 @@ describe("Ship class",() => {
         expect(ship1.isSunk()).toBeFalsy();
         ship1.hit();
         expect(ship1.isSunk()).toBeTruthy();
-        
     })
 })
